@@ -35,7 +35,7 @@ const Navbar = ({ selected }) => {
             prop={state}
             open={open}
             onClick={() => {
-              setOpen(open => !open);
+              setOpen((open) => !open);
             }}
           >
             <div />
@@ -43,7 +43,7 @@ const Navbar = ({ selected }) => {
             <div />
           </Hamburger>
           <LinkWrap>
-            {navs.map(link => {
+            {navs.map((link) => {
               if (link == selected) {
                 return (
                   <NavLink selected={true} prop={state}>{`${link}`}</NavLink>
@@ -56,9 +56,9 @@ const Navbar = ({ selected }) => {
         </Wrapper>
       </Nav>
       <SideNav open={open}>
-        {navs.map(link => {
+        {navs.map((link) => {
           if (link == selected) {
-            return <SideNavItem selected={true}>{`${link}`}</SideNavItem>;
+            return <SideNavItem>{`${link}`}</SideNavItem>;
           } else {
             return <SideNavItem>{link}</SideNavItem>;
           }

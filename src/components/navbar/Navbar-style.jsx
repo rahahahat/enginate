@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  height: 85px;
+  height: 75px;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -10,20 +10,22 @@ export const Nav = styled.nav`
   justify-content: center;
   transition: 0.1s ease-out;
   box-sizing: border-box;
+  z-index: 1000;
 `;
 export const Wrapper = styled.div`
-  width: 80%;
+  width: 70%;
   height: 100%;
   padding: 0px 25px;
   align-self: center;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  background-color: ${({ prop }) => (prop ? "#2d2e2e" : "transparent")};
+  background-color: white;
+  /* background-color: ${({ prop }) => (prop ? "#252525" : "transparent")}; */
   box-shadow: ${({ prop }) =>
-    prop ? "0px 0px 59px 26px rgba(0,0,0,0.2)" : null};
-  border-radius: 0px 0px 10px 10px;
-  transition: 0.2s linear;
+    prop ? "0px 0px 25px 3px rgba(0,0,0,0.2)" : null};
+  border-radius: 0px 0px 15px 15px;
+  transition: 0.3s linear;
   @media (max-width: 900px) {
     justify-content: flex-start;
     width: 100%;
@@ -50,17 +52,23 @@ export const NavLink = styled.li`
   align-self: center;
   min-width: 20px;
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  color: ${({ prop }) => (prop ? "white" : "black")};
+  /* color: ${({ prop }) => (prop ? "white" : "black")}; */
+  color: black;
   padding-bottom: 5px;
-  transition: 0.2s ease;
+  transition: 0.2s linear;
   border-bottom: 2px solid transparent;
+  font-weight: 300;
+  /* border-bottom: ${({ prop, selected }) =>
+    selected ? (prop ? "2px solid white" : "2px solid black") : null}; */
+  border-bottom: ${({ prop, selected }) =>
+    selected ? (prop ? "2px solid black" : "2px solid black") : null};
   cursor: pointer;
   :hover {
     border-bottom: ${({ prop }) =>
-      prop ? "2px solid white" : "2px solid black"};
+      prop ? "2px solid black" : "2px solid black"};
   }
 `;
 
@@ -89,7 +97,8 @@ export const Hamburger = styled.div`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-    background-color: ${({ prop }) => (prop ? "white" : "black")};
+    /* background-color: ${({ prop }) => (prop ? "white" : "black")}; */
+    background-color: black;
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
@@ -111,10 +120,11 @@ export const Hamburger = styled.div`
 
 export const SideNav = styled.nav`
   visibility: hidden;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${({ open }) => (open ? "#333333" : "transparent")};
+  background-color: ${({ open }) => (open ? "white" : "transparent")};
   text-align: left;
   padding: 20px 20px 0px 20px;
   position: fixed;
@@ -123,7 +133,7 @@ export const SideNav = styled.nav`
   min-width: 40%;
   transition: 0.2s ease-in-out;
   box-shadow: ${({ open }) =>
-    open ? "0px 0px 20px -2px rgba(0, 0, 0, 0.2)" : null};
+    open ? "0px 0px 15px 2px rgba(0,0,0,0.1)" : null};
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-110%)")};
   border-radius: 0 15px 15px 0px;
   @media (max-width: 900px) {
@@ -135,35 +145,19 @@ export const SideNav = styled.nav`
   }
 `;
 
-// export const SideNavItem = styled.div`
-//   box-sizing: border-box;
-//   font-size: 1.4rem;
-//   color: white;
-//   text-decoration: none;
-//   font-family: "Raleway", sans-serif;
-//   padding: 7px;
-//   background-color: #616161;
-//   border-radius: 5px;
-//   margin-bottom: 20px;
-//   @media (max-width: 500px) {
-//     padding: 1rem;
-//     font-size: 1.2rem;
-//     padding: 10px;
-//   }
-// `;
-
 export const SideNavItem = styled.div`
   box-sizing: border-box;
   font-size: 1.4rem;
-  color: white;
+  color: black;
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  padding: 0px 10px;
-  border-left: 2px solid white;
+  font-family: "Source Sans Pro", sans-serif;
+  border-left: 2px solid black;
   margin-bottom: 20px;
+  padding: 0px 10px;
+  font-weight: 300;
   @media (max-width: 500px) {
     padding: 1rem;
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 0px 10px;
   }
 `;
