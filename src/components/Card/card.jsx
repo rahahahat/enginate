@@ -1,6 +1,11 @@
 import React from "react";
-import { useTransition, useChain } from "react-spring";
-import { CardWrap, CardListItem } from "./card-styles";
+import { useTransition, useChain, config, useTrail } from "react-spring";
+import {
+  CardWrap,
+  CardItemWrap,
+  CardItem,
+  QuestionMarkIcon,
+} from "./card-styles";
 const data = [
   "Structural Engineering",
   "Civil Engineering",
@@ -36,24 +41,35 @@ const Card = () => {
     leave: { opacity: 0 },
     config: { duration: 300 },
   });
-  
-  const ItemPositionAnimation = useTransition(data, (item) => item, {
-    ref: itemRef,
-    from: { transform: "translateX(-50px)", opacity: 0 },
-    enter: { transform: "translateX(0px)", opacity: 1 },
-    leave: { transform: "translateX(50px)", opacity: 0 },
-    config: { duration: 300 },
-  });
+
+  const ItemPositionAnimation = useTransition(
+    show ? data : [],
+    (item) => item,
+    {
+      ref: itemRef,
+      from: { transform: "translate3d(-50px,0,0)", opacity: 0 },
+      enter: { transform: "translat3d(0px,0,0)", opacity: 1 },
+      leave: { transform: "translate3d(50px,0,0)", opacity: 0 },
+      config: config.wobbly,
+    }
+  );
 
   useChain([cardRef, itemRef], [0, 0.2]);
-  return cardOpacityAnimation.map(({ item, key, props }) => (
-    item && <CardWrap key={key} style={props}>
-      {ItemPositionAnimation.map(({ item, key, props }) => (
-        <CardListItem key={key} style={props}>
-          {item}
-        </CardListItem>
-      ))}
-    </CardWrap>
-  ));
+  return cardOpacityAnimation.map(
+    ({ item, key, props }) =>
+      item && (
+        <CardWrap key={key} style={props}>
+          {ItemPositionAnimation.map(
+            ({ item, key, props }) =>
+              item && (
+                <CardItemWrap key={key} style={props}>
+                  <CardItem>{item}</CardItem>
+                  <QuestionMarkIcon />
+                </CardItemWrap>
+              )
+          )}
+        </CardWrap>
+      )
+  );
 };
 export default Card;

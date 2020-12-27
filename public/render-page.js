@@ -113,6 +113,13 @@ var plugins = [{
     "transpileTemplateLiterals": true,
     "pure": false
   }
+}, {
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "fonts": ["Raleway"],
+    "display": "swap"
+  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -1329,6 +1336,54 @@ var unitlessKeys = {
 
 /* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
 
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+var format = function format(string) {
+  return string.split(' ').map(function (s) {
+    return s.replace(/^\w/, function (s) {
+      return s.toUpperCase();
+    });
+  }).join(' ');
+};
+
+var getFonts = function getFonts(options) {
+  return options.fonts.map(format).join('|').replace(/ /g, '+');
+};
+
+function getDisplay(options) {
+  return options.display ? '&display=' + options.display : '';
+}
+
+exports.onRenderBody = function (_ref, options) {
+  var setHeadComponents = _ref.setHeadComponents;
+  var link = 'https://fonts.googleapis.com/css?family=' + getFonts(options) + getDisplay(options);
+  setHeadComponents([_react2.default.createElement('link', {
+    key: 'fonts',
+    href: link,
+    rel: 'stylesheet'
+  })]);
+};
 
 /***/ }),
 

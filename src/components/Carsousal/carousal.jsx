@@ -10,19 +10,19 @@ import {
 import "../../index.css";
 
 const Carousal = ({}) => {
-  const [img, setImg] = React.useState(0);
-  React.useEffect(() => {
-    const time = setTimeout(() => {
-      setImg((img) => {
-        return (img + 1) % 2;
-      });
-    }, 4000);
-    return () => {
-      clearTimeout(time);
-    };
-  });
+  // const [img, setImg] = React.useState(0);
+  // React.useEffect(() => {
+  //   const time = setTimeout(() => {
+  //     setImg((img) => {
+  //       return (img + 1) % 2;
+  //     });
+  //   }, 4000);
+  //   return () => {
+  //     clearTimeout(time);
+  //   };
+  // });
   return (
-    <CarousalWrapper src={require(`../../../static/images/${img}.jpg`)}>
+    <CarousalWrapper src={require(`../../../static/images/1.jpg`)}>
       {/* <Image src={require(`../../../static/images/${img}.jpg`)} /> */}
       <CarousalHover className="caro-hover">
         <IconWrap>
