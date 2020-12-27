@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Layout from "../common-styles/layout-styles";
-import { Section, Text } from "../common-styles/section-styles";
+import { Section, Text, TestLogo } from "../common-styles/section-styles";
+import Card from "../components/Card/card";
 import Carousal from "../components/Carsousal/carousal";
 import Settings from "../../static/images/icons8-settings.svg";
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
     <>
       <Navbar selected={"Home"} />
       <Layout>
-        <Section>
+        <Section bg="#e9e9e9" height="700px" justifyCont="space-around">
           <Text>
             <span
               css={`
@@ -29,17 +30,9 @@ const Home = () => {
             >
               CONSULTANTS
             </span>
-            {/* <span
-              css={`
-                font-size: 2.8rem;
-                display: block;
-              `}
-            >
-              FROM INCEPTION TO COMPLETION
-            </span> */}
           </Text>
           <Carousal />
-          {/* <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 200"
             css={`
@@ -68,7 +61,7 @@ const Home = () => {
               fill-opacity="0.4"
               d="M0,128L26.7,154.7C53.3,181,107,235,160,224C213.3,213,267,139,320,128C373.3,117,427,171,480,197.3C533.3,224,587,224,640,186.7C693.3,149,747,75,800,85.3C853.3,96,907,192,960,218.7C1013.3,245,1067,203,1120,181.3C1173.3,160,1227,160,1280,154.7C1333.3,149,1387,139,1413,133.3L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
             ></path>
-          </svg> */}
+          </svg>
           <img
             src="https://img.icons8.com/ios/700/000000/measurement-tool.png"
             css={`
@@ -109,6 +102,10 @@ const Home = () => {
             `}
           />
         </Section>
+        <Section height="1000px" padding="50px">
+          <Card />
+        </Section>
+        <Section bg="red" height="600px"></Section>
       </Layout>
     </>
   );

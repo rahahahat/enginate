@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  background-color: #e9e9e9;
+  background-color: ${({ bg }) => bg || "white"};
   position: relative;
-  height: 700px;
+  height: ${({ height }) => height || "fit-content"};
   display: flex;
-  justify-content: space-around;
-
-  /* padding-left: 10px;
-  padding-right: 10px; */
+  justify-content: ${({ justifyCont }) => justifyCont || "center"};
+  padding: ${({ padding }) => padding || null};
 `;
 
 export const Text = styled.h1`
@@ -20,4 +18,7 @@ export const Text = styled.h1`
   text-align: center;
   color: #252525;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
