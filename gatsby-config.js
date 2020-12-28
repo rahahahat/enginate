@@ -17,16 +17,30 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Raleway"],
+          families: ["Raleway", `Bebas Neue`],
         },
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway`],
+        fonts: [`Raleway`, `Bebas Neue`],
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-less`,
+    //   options: {
+    //     loaderOptions: {
+    //       javascriptEnabled: true,
+    //     },
+    //   },
+    // },
   ],
 };

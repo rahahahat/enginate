@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   z-index: 1000;
 `;
 export const Wrapper = styled.div`
-  width: 70%;
+  width: 100%;
   height: 100%;
   padding: 0px 25px;
   align-self: center;
@@ -23,9 +23,8 @@ export const Wrapper = styled.div`
   background-color: white;
   /* background-color: ${({ prop }) => (prop ? "#252525" : "transparent")}; */
   box-shadow: ${({ prop }) =>
-    prop ? "0px 0px 25px 3px rgba(0,0,0,0.2)" : null};
-  border-radius: 0px 0px 15px 15px;
-  transition: 0.3s linear;
+    prop ? "0px 0px 30px -1px rgba(0,0,0,0.6)" : null};
+  transition: 0.2s linear;
   @media (max-width: 900px) {
     justify-content: flex-start;
     width: 100%;
@@ -52,7 +51,8 @@ export const NavLink = styled.li`
   align-self: center;
   min-width: 20px;
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
   font-size: 1.2rem;
   font-weight: 400;
   /* color: ${({ prop }) => (prop ? "white" : "black")}; */
