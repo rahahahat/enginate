@@ -17,30 +17,30 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Raleway", `Bebas Neue`],
+          families: ["Raleway", "Bebas Neue", "Alatsi", "Roboto Condensed"],
         },
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway`, `Bebas Neue`],
+        fonts: [`Raleway`, `Bebas Neue`, "Alatsi", "Roboto Condensed"],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+        },
       },
     },
     {
       resolve: "gatsby-plugin-antd",
       options: {
-        style: true,
+        style: false,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-less`,
-    //   options: {
-    //     loaderOptions: {
-    //       javascriptEnabled: true,
-    //     },
-    //   },
-    // },
   ],
 };

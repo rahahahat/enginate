@@ -5,22 +5,62 @@ export const CarousalWrapper = styled.div`
   position: relative;
   align-self: center;
   background-color: #d8d8d8;
-  height: 550px;
-  width: 900px;
-  /* left: 350px; */
+  width: fit-content;
+  height: fit-content;
   &:hover > .caro-hover {
     display: flex;
   }
   border-radius: 10px;
   box-sizing: border-box;
-  z-index: 200;
-  transition: background 0.4s ease-in-out;
-  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
-  background: url(${({ src }) => src});
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: 5;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.4);
 `;
 
+export const BgImg = styled.img`
+  width: 75vw;
+  opacity: 0.6;
+  border-radius: 10px;
+`;
+export const CarousalOverlay = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(81, 137, 156, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+`;
+export const CarousalOverlayText = styled.div`
+  align-self: center;
+  text-align: center;
+  position: relative;
+  padding: 0px 60px;
+  color: #3b3b3b;
+`;
+
+export const Logo2 = styled.img`
+  align-self: center;
+  display: block;
+  width: 10vw;
+  height: 8vw;
+  position: relative;
+  top: 35px;
+  display: inline;
+`;
+export const Logo1 = styled.img`
+  align-self: center;
+  display: block;
+  width: 26vw;
+  /* height: 20vw; */
+  /* position: relative;
+  top: 35px;
+  display: inline; */
+`;
 export const CarousalHover = styled.div`
   position: absolute;
   height: 550px;

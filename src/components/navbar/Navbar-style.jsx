@@ -20,8 +20,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  background-color: white;
-  /* background-color: ${({ prop }) => (prop ? "#252525" : "transparent")}; */
+  background-color: ${({ prop }) => (prop ? "white" : "transparent")};
   box-shadow: ${({ prop }) =>
     prop ? "0px 0px 30px -1px rgba(0,0,0,0.6)" : null};
   transition: 0.2s linear;
@@ -37,7 +36,7 @@ export const LinkWrap = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 350px;
+  width: 250px;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;

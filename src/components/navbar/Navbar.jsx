@@ -9,9 +9,9 @@ import {
   SideNavWrap,
   SideNavItem,
 } from "./Navbar-style.jsx";
-
+import { Link } from "gatsby";
 const Navbar = ({ selected }) => {
-  const navs = ["Home", "About Us", "Contact Us"];
+  const navs = ["Home", "Contact Us"];
   React.useEffect(() => {
     document.addEventListener(
       "scroll",
@@ -45,11 +45,41 @@ const Navbar = ({ selected }) => {
           <LinkWrap>
             {navs.map((link) => {
               if (link == selected) {
+                const path =
+                  link == "About Us"
+                    ? "/about"
+                    : link == "Contact Us"
+                    ? "/contact"
+                    : "/";
                 return (
-                  <NavLink selected={true} prop={state}>{`${link}`}</NavLink>
+                  <Link
+                    css={`
+                      text-decoration: none;
+                    `}
+                    to={path}
+                  >
+                    <NavLink selected={true} prop={state}>
+                      {link}
+                    </NavLink>
+                  </Link>
                 );
               } else {
-                return <NavLink prop={state}>{link}</NavLink>;
+                const path =
+                  link == "About Us"
+                    ? "/about"
+                    : link == "Contact Us"
+                    ? "/contact"
+                    : "/";
+                return (
+                  <Link
+                    css={`
+                      text-decoration: none;
+                    `}
+                    to={path}
+                  >
+                    <NavLink prop={state}>{link}</NavLink>
+                  </Link>
+                );
               }
             })}
           </LinkWrap>
@@ -58,9 +88,39 @@ const Navbar = ({ selected }) => {
       <SideNav open={open}>
         {navs.map((link) => {
           if (link == selected) {
-            return <SideNavItem>{`${link}`}</SideNavItem>;
+            const path =
+              link == "About Us"
+                ? "/about"
+                : link == "Contact Us"
+                ? "/contact"
+                : "/";
+            return (
+              <Link
+                css={`
+                  text-decoration: none;
+                `}
+                to={path}
+              >
+                <SideNavItem>{`${link}`}</SideNavItem>
+              </Link>
+            );
           } else {
-            return <SideNavItem>{link}</SideNavItem>;
+            const path =
+              link == "About Us"
+                ? "/about"
+                : link == "Contact Us"
+                ? "/contact"
+                : "/";
+            return (
+              <Link
+                css={`
+                  text-decoration: none;
+                `}
+                to={path}
+              >
+                <SideNavItem>{`${link}`}</SideNavItem>
+              </Link>
+            );
           }
         })}
       </SideNav>

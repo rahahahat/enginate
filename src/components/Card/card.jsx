@@ -6,6 +6,11 @@ import {
   CardItem,
   QuestionMarkIcon,
 } from "./card-styles";
+// import { Tooltip } from "antd";
+// import "antd/lib/style/core/motion/";
+// // import "antd/lib/tooltip/style/index.css";
+// // import "antd/lib/tooltip/style/index.less";
+
 const data = [
   "Structural Engineering",
   "Civil Engineering",
@@ -19,6 +24,7 @@ const data = [
   "Environmental",
   "Bespoke Engineering Software Design",
 ];
+
 const Card = () => {
   React.useEffect(() => {
     document.addEventListener(
@@ -64,7 +70,9 @@ const Card = () => {
               item && (
                 <CardItemWrap key={key} style={props}>
                   <CardItem>{item}</CardItem>
+                  {/* <Tooltip placement="right" title="hello"> */}
                   <QuestionMarkIcon />
+                  {/* </Tooltip> */}
                 </CardItemWrap>
               )
           )}
