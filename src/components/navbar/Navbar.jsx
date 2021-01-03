@@ -9,9 +9,27 @@ import {
   SideNavWrap,
   SideNavItem,
 } from "./Navbar-style.jsx";
-import { Link } from "gatsby";
-const Navbar = ({ selected }) => {
-  const navs = ["Home", "Contact Us"];
+import { Link } from "react-scroll";
+const Navbar = () => {
+  const [selected, setSelected] = React.useState("Home");
+  const navs = ["Home", "About Us", "Services", "Sectors", "Contact Us"];
+  const setLink = (link) => {
+    setSelected(link);
+  };
+  const switchLinks = (link) => {
+    switch (link) {
+      case "Home":
+        return "home";
+      case "About Us":
+        return "about-us";
+      case "Services":
+        return "services";
+      case "Sectors":
+        return "sectors";
+      case "Contact Us":
+        return "contact-us";
+    }
+  };
   React.useEffect(() => {
     document.addEventListener(
       "scroll",
@@ -45,18 +63,16 @@ const Navbar = ({ selected }) => {
           <LinkWrap>
             {navs.map((link) => {
               if (link == selected) {
-                const path =
-                  link == "About Us"
-                    ? "/about"
-                    : link == "Contact Us"
-                    ? "/contact"
-                    : "/";
                 return (
                   <Link
-                    css={`
-                      text-decoration: none;
-                    `}
-                    to={path}
+                    to={switchLinks(link)}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-50}
+                    onSetActive={() => {
+                      setLink(link);
+                    }}
                   >
                     <NavLink selected={true} prop={state}>
                       {link}
@@ -64,18 +80,17 @@ const Navbar = ({ selected }) => {
                   </Link>
                 );
               } else {
-                const path =
-                  link == "About Us"
-                    ? "/about"
-                    : link == "Contact Us"
-                    ? "/contact"
-                    : "/";
                 return (
                   <Link
-                    css={`
-                      text-decoration: none;
-                    `}
-                    to={path}
+                    to="sectors"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-50}
+                    onSetActive={() => {
+                      setLink(link);
+                    }}
+                    to={switchLinks(link)}
                   >
                     <NavLink prop={state}>{link}</NavLink>
                   </Link>
@@ -88,35 +103,33 @@ const Navbar = ({ selected }) => {
       <SideNav open={open}>
         {navs.map((link) => {
           if (link == selected) {
-            const path =
-              link == "About Us"
-                ? "/about"
-                : link == "Contact Us"
-                ? "/contact"
-                : "/";
             return (
               <Link
-                css={`
-                  text-decoration: none;
-                `}
-                to={path}
+                to="sectors"
+                spy={true}
+                smooth={true}
+                duration={500}
+                activeClass="active"
+                offset={-50}
+                onSetActive={() => {
+                  setLink(link);
+                }}
+                to={switchLinks(link)}
               >
                 <SideNavItem>{`${link}`}</SideNavItem>
               </Link>
             );
           } else {
-            const path =
-              link == "About Us"
-                ? "/about"
-                : link == "Contact Us"
-                ? "/contact"
-                : "/";
             return (
               <Link
-                css={`
-                  text-decoration: none;
-                `}
-                to={path}
+                to={switchLinks(link)}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
+                onSetActive={() => {
+                  setLink(link);
+                }}
               >
                 <SideNavItem>{`${link}`}</SideNavItem>
               </Link>

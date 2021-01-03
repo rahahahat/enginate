@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       css={`
-        height: 100px;
+        height: 300px;
         background-color: #353535;
         display: flex;
         flex-direction: column;

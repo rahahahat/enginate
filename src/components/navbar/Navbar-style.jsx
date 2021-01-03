@@ -36,7 +36,7 @@ export const LinkWrap = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 250px;
+  width: 500px;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;

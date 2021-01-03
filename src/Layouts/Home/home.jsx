@@ -26,15 +26,16 @@ export default function Home() {
     <>
       <Navbar selected="Home" />
       <Layout>
-        <Section padding="0px" display="flex">
+        <Section padding="0px" display="flex" id="home">
           <Carousal />
         </Section>
         <Section
           flexDir="column"
           display="flex"
           justifyCont="center"
-          padding="3vw"
+          padding="4vw"
           bg="#eeeeee"
+          className="about-us"
         >
           <div
             css={`
@@ -107,7 +108,7 @@ export default function Home() {
             </div>
           </div>
         </Section>
-        <Section padding="5vw" flexDir="column" display="flex">
+        <Section padding="5vw" flexDir="column" display="flex" id="services">
           <div
             css={`
               text-align: center;
@@ -146,10 +147,9 @@ export default function Home() {
               }
             `}
           >
-            The services we provide are built around the skills and expertise of
-            our workforce. Our culture and the way we work determine whether
-            clients and partners want to do business with us, and whether
-            talented people choose a career with us.
+            Enginate provides best in class services for all your Structural and
+            civil Engineering needs. We fully embrace the importance of time,
+            quality and cost for any project.
           </div>
           <div
             css={`
@@ -172,33 +172,53 @@ export default function Home() {
             <ServiceCard
               name="Structural Engineering"
               img={s5}
-              text="We carry a wealth of knowledge in structural engineering design and work closely with the team to provide a robust solution, on time and on budget scheme. Our Engineers can carry out design in Indian Standards, British Standards and Eurocodes. "
+              text="We carry a wealth of knowledge in structural engineering design. Our teams work closely with clients to provide a robust solution, on time and on budget. Our Engineers are fully proficient in carrying out designs to Indian Standards, British Standards and Eurocodes."
               grayscale
             />
             <ServiceCard
               name="Civil Engineering"
               img={s6}
-              text="Our Civil Engineering team provide innovative solution to provide an on-budget scheme and ensure that the contractors are supplied with the information prior to any structural works being carried out. With advanced engineering technology we ensure that the most efficient design has been provided. "
+              text="Our Civil Engineering team provides innovative solutions for delivering an on-budget scheme. We use advanced automation methods to ensure that the most efficient and cost-effective solutions are provided. "
             />
             <ServiceCard
               name="Project and Design Management"
               img={s8}
-              text="Our dedicated team of project and design management provide solutions to the most complex contracts. Our main focus is to ensure that the project is delivered to client’s aspiration in tandem with the planning, organisation, reporting and programming. "
+              text="Our dedicated team of project and design managers provide solutions to the most complex contracts. Our focus is to ensure that the project is delivered to our client’s aspirations in tandem with the planning, organisation, reporting and programming."
               grayscale
             />
             <ServiceCard
               name="Reinforcement Detailing"
               img={s7}
-              text="Our dedicated team of experienced technicians and engineers specialise in providing reinforcement detailing for all types of concrete structures. Our team have previously worked on various complex structures including detailing for various bridges. Our technicians and checking engineers specialise in Indian Standards, British Standards and Eurocodes. "
+              text="Our dedicated team of experienced technicians and engineers specialise in providing reinforcement detailing for all types of concrete structures. We have worked on complex structures including detailing for various bridges, buildings and below ground structures. Our technicians are fully proficient in using latest softwares including REVIT, BIM360, AutoCAD, NavisWorks, & TEKLA.  "
             />
-            <ServiceCard name="Bridge Engineering" img={s3} />
-            <ServiceCard name="Consulting" />
-            <ServiceCard name="On Site Assistance" img={s4} grayscale />
-            <ServiceCard name="BIM & CAD Modelling" img={s10} />
-            <ServiceCard name="Digital Engineering" img={s9} />
+            <ServiceCard
+              name="Bridge Engineering"
+              img={s3}
+              text="Our engineers carry an extensive experience in designing and delivering various bridges over the years. We work closely with clients and understand their aspirations to deliver a scheme that meets their requirements. We offer a full range of services including feasibility studies, preliminary and detailing design, design peer review, on site reviews and visits."
+            />
+            <ServiceCard
+              name="Consulting"
+              text="We offer expert and professional advice where our services are required. Our expert knowledge and experience makes Enginate a company that clients can trust and value our advice. We support our clients with Expert Witness reports, Structural inspections, Partywall surveys & Litigation Assistance. "
+            />
+            <ServiceCard
+              name="On Site Assistance"
+              img={s4}
+              text="Our team provides on-site assistance for all projects and with our extensive experience within the construction sector. Our teams offers assistance and advice during feasibility, tender and construction period. "
+              grayscale
+            />
+            <ServiceCard
+              name="BIM & CAD Modelling"
+              img={s10}
+              text="We offer comprehensive BIM and Computer Aided Drafting (CAD) solutions ranging from 2D drawings to 3D and beyond to relevant engineering standards such as LOD 200. Our 2D modelling is carried out in Autodesk CAD whilst our 3D modelling in Revit along with fully integrated BIM level clash detections. "
+            />
+            <ServiceCard
+              name="Digital Engineering"
+              img={s9}
+              text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
+            />
           </div>
         </Section>
-        <Section bg="#eeeeee" padding="50px" display="block">
+        <Section bg="#eeeeee" padding="4vw" display="block" id="sectors">
           <div
             css={`
               text-align: center;
@@ -274,7 +294,7 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Section display="block" padding="40px">
+        <Section display="block" padding="10rem" id="contact-us">
           <div
             css={`
               display: flex;
@@ -285,27 +305,28 @@ export default function Home() {
           >
             <div
               css={`
-                width: 20%;
-                padding: 20px;
+                width: 18%;
                 /* background-color: #00fff2; */
                 display: flex;
                 justify-content: center;
                 box-sizing: border-box;
+                margin-right: 4%;
               `}
             >
               <img
-                src="https://img.icons8.com/color/280/000000/add-contact-to-company.png"
+                src="https://img.icons8.com/color/270/000000/add-contact-to-company.png"
                 css={`
                   align-self: center;
                   opacity: 0.8;
                   position: relative;
-                  left: -20px;
+                  left: -5px;
+                  top: -10px;
                 `}
               />
             </div>
             <div
               css={`
-                width: 80%;
+                width: 78%;
                 padding: 20px;
                 /* background-color: yellow; */
                 display: flex;
@@ -335,22 +356,20 @@ export default function Home() {
                   font-family: "Raleway";
                   position: relative;
                   top: -10px;
-                  font-size: 1.5rem;
+                  font-size: 1.6rem;
                   margin-bottom: 10px;
                 `}
               >
-                Get in touch with our people. We have offices in over 50
-                countries across six continents. Browse through our locations to
-                find the right contacts for your inquiry. We will get back to
-                you as soon as possible
+                Get in touch with our people. Drop us a line and we will get
+                back to you as soon as possible.
               </div>
               <div
                 css={`
                   text-align: justify;
                   font-family: "Bebas Neue";
                   position: relative;
-                  top: -10px;
-                  font-size: 2rem;
+                  /* top: -10px; */
+                  font-size: 3rem;
                   /* margin-bottom: 10px; */
                 `}
               >
@@ -361,7 +380,7 @@ export default function Home() {
                   text-align: justify;
                   font-family: "Raleway";
                   position: relative;
-                  font-size: 1.5rem;
+                  font-size: 1.6rem;
                   margin-bottom: 10px;
                   top: -10px;
                 `}
