@@ -5,9 +5,8 @@ export default function TestCard() {
     <div
       class="flip-container"
       css={`
-        .flip-container {
-          perspective: 1000px;
-        }
+        perspective: 1000px;
+        z-index: 300;
       `}
     >
       <div
@@ -32,11 +31,13 @@ export default function TestCard() {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 2;
+            z-index: 100;
             background-color: red;
             transform: rotateY(0deg);
           `}
-        ></div>
+        >
+          front
+        </div>
         <div
           class="back"
           css={`
@@ -49,7 +50,9 @@ export default function TestCard() {
             background-color: #00ccff;
             transform: rotateY(180deg);
           `}
-        ></div>
+        >
+          back
+        </div>
       </div>
     </div>
   );
