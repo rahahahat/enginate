@@ -75,7 +75,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               height: 100%;
               background-color: rgba(35, 87, 105, 0.3);
               position: relative;
-              z-index: 100;
+              z-index: 10;
               @media (max-width: 1200px) {
                 width: 270px;
               }
@@ -100,6 +100,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
                       border-top: 2px solid #10536d;
                       border-right: 2px solid #10536d;
                       border-bottom: 2px solid #10536d;
+                      /* border-radius: 0px 10px 10px 0px; */
                     `}
                   >
                     {name}
@@ -117,6 +118,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               position: absolute;
               z-index: 2;
               filter: ${grayscale ? "grayscale(100%)" : null};
+              /* border-radius: 20px; */
             `}
           />
         </div>
@@ -139,7 +141,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               height: 100%;
               background-color: rgba(25, 91, 116, 0.8);
               position: relative;
-              z-index: 1;
+              z-index: 200;
               @media (max-width: 1200px) {
                 width: 270px;
               }
@@ -151,7 +153,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
                 font-size: 1.2rem;
                 font-family: "Raleway";
                 padding: 20px;
-                z-index: 200;
+                z-index: 300;
               `}
             >
               {text}
@@ -163,9 +165,8 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               height: 450px;
               width: 100%;
               object-fit: cover;
-              /* box-sizing: border-box; */
               position: absolute;
-              z-index: 3;
+              z-index: 1;
             `}
           />
         </div>
