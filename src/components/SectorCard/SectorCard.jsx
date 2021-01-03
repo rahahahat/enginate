@@ -9,7 +9,6 @@ export default function SectorCard({ sector, src }) {
         flex-direction: column;
         justify-content: center;
         background-color: rgba(22, 132, 196, 0.1);
-        /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); */
         width: 240px;
         height: 240px;
         border-radius: 10%;

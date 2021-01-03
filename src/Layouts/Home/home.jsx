@@ -16,10 +16,10 @@ import s5 from "../../../static/images/s5.png";
 import s6 from "../../../static/images/s6.png";
 import s7 from "../../../static/images/s7.jpg";
 import s8 from "../../../static/images/s8.png";
-import s9 from "../../../static/images/s9.png";
+import s9 from "../../../static/images/s9.jpg";
 import s10 from "../../../static/images/s10.jpg";
-// import Flippy, { FrontSide, BackSide } from "react-flippy";
 import "../../index.css";
+
 export default function Home() {
   return (
     <>
@@ -60,19 +60,10 @@ export default function Home() {
               }
             `}
           >
-            {/* <img
-              css={`
-                position: absolute;
-                opacity: 0.2;
-                align-self: center;
-              `}
-              src="https://img.icons8.com/nolan/280/about.png"
-            /> */}
             <div
               css={`
                 font-size: 1.5rem;
                 font-family: "Raleway";
-                /* background-color: red; */
                 font-weight: 400;
                 position: relative;
                 justify-content: center;
@@ -293,7 +284,16 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Section display="block" padding="10rem 5rem" id="contact-us">
+        <Section
+          display="block"
+          id="contact-us"
+          css={`
+            padding: 9rem 5rem;
+            @media (max-width: 1000px) {
+              padding: 2rem;
+            }
+          `}
+        >
           <div
             css={`
               display: flex;
@@ -357,8 +357,8 @@ export default function Home() {
                   @media (max-width: 650px) {
                     font-size: 20vw;
                   }
-                  @media (max-width: 420px) {
-                    font-size: 17.5vw;
+                  @media (max-width: 400px) {
+                    font-size: 15vw;
                   }
                 `}
               >
@@ -372,6 +372,9 @@ export default function Home() {
                   top: -10px;
                   font-size: 1.6rem;
                   margin-bottom: 10px;
+                  @media (max-width: 400px) {
+                    font-size: 1.2rem;
+                  }
                 `}
               >
                 Get in touch with our people. Drop us a line and we will get
@@ -385,6 +388,9 @@ export default function Home() {
                   /* top: -10px; */
                   font-size: 3rem;
                   /* margin-bottom: 10px; */
+                  @media (max-width: 400px) {
+                    font-size: 2rem;
+                  }
                 `}
               >
                 GENERAL QUERIES
@@ -397,6 +403,9 @@ export default function Home() {
                   font-size: 1.6rem;
                   margin-bottom: 10px;
                   top: -10px;
+                  @media (max-width: 400px) {
+                    font-size: 1.2rem;
+                  }
                 `}
               >
                 info@enginateconsultants.com

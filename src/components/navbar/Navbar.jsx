@@ -10,6 +10,7 @@ import {
   SideNavItem,
 } from "./Navbar-style.jsx";
 import { Link } from "react-scroll";
+import logo from "../../../static/images/logo-dark-no-text.png";
 const Navbar = () => {
   const [selected, setSelected] = React.useState("Home");
   const navs = ["Home", "About Us", "Services", "Sectors", "Contact Us"];
@@ -60,6 +61,15 @@ const Navbar = () => {
             <div />
             <div />
           </Hamburger>
+          <img
+            src={logo}
+            css={`
+              display: ${state ? "block" : "none"};
+              width: 60px;
+              height: 50px;
+              align-self: center;
+            `}
+          />
           <LinkWrap>
             {navs.map((link) => {
               if (link == selected) {

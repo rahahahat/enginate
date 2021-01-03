@@ -18,14 +18,14 @@ export const Wrapper = styled.div`
   padding: 0px 25px;
   align-self: center;
   display: flex;
-  justify-content: center;
+  justify-content: ${({ prop }) => (prop ? "space-around" : "center")};
   box-sizing: border-box;
   background-color: ${({ prop }) => (prop ? "white" : "transparent")};
   box-shadow: ${({ prop }) =>
     prop ? "0px 0px 30px -1px rgba(0,0,0,0.6)" : null};
   transition: 0.2s linear;
   @media (max-width: 900px) {
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 100%;
     border-radius: 0px;
   }
@@ -54,16 +54,13 @@ export const NavLink = styled.li`
   letter-spacing: 1px;
   font-size: 1.2rem;
   font-weight: 400;
-  /* color: ${({ prop }) => (prop ? "white" : "black")}; */
-  color: black;
+  color: ${({ prop }) => (prop ? "black" : "white")};
   padding-bottom: 5px;
   transition: 0.2s linear;
   border-bottom: 2px solid transparent;
   font-weight: 300;
-  /* border-bottom: ${({ prop, selected }) =>
-    selected ? (prop ? "2px solid white" : "2px solid black") : null}; */
   border-bottom: ${({ prop, selected }) =>
-    selected ? (prop ? "2px solid black" : "2px solid black") : null};
+    selected ? (prop ? "2px solid black" : "2px solid white") : null};
   cursor: pointer;
   :hover {
     border-bottom: ${({ prop }) =>
@@ -80,6 +77,8 @@ export const Hamburger = styled.div`
   width: 2rem;
   height: 2rem;
   background: transparent;
+  left: 20px;
+  position: absolute;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -96,8 +95,7 @@ export const Hamburger = styled.div`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-    /* background-color: ${({ prop }) => (prop ? "white" : "black")}; */
-    background-color: black;
+    background-color: ${({ prop }) => (prop ? "black" : "white")};
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

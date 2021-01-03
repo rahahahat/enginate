@@ -4,7 +4,6 @@ import img0 from "../../../static/images/0.jpg";
 import img1 from "../../../static/images/1.jpg";
 import img2 from "../../../static/images/2.jpg";
 import img3 from "../../../static/images/3.jpg";
-import img4 from "../../../static/images/4.jpg";
 import img5 from "../../../static/images/5.jpg";
 import img6 from "../../../static/images/6.jpg";
 import img7 from "../../../static/images/7.jpg";
@@ -20,7 +19,7 @@ const Carousal = ({}) => {
   React.useEffect(() => {
     const time = setTimeout(() => {
       setImg((img) => {
-        return (img + 1) % 11;
+        return (img + 1) % 10;
       });
     }, 3000);
     return () => {
