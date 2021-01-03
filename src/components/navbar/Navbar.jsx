@@ -10,7 +10,7 @@ import {
   SideNavItem,
 } from "./Navbar-style.jsx";
 import { Link } from "react-scroll";
-import logo from "../../../static/images/logo-dark-no-text.png";
+import logo from "../../../public/images/logo-dark-no-text.png";
 const Navbar = () => {
   const [selected, setSelected] = React.useState("Home");
   const navs = ["Home", "About Us", "Services", "Sectors", "Contact Us"];
@@ -71,10 +71,11 @@ const Navbar = () => {
             `}
           />
           <LinkWrap>
-            {navs.map((link) => {
+            {navs.map((link, index) => {
               if (link == selected) {
                 return (
                   <Link
+                    key={index}
                     to={switchLinks(link)}
                     spy={true}
                     smooth={true}
@@ -92,6 +93,7 @@ const Navbar = () => {
               } else {
                 return (
                   <Link
+                    key={index}
                     to="sectors"
                     spy={true}
                     smooth={true}
@@ -111,10 +113,11 @@ const Navbar = () => {
         </Wrapper>
       </Nav>
       <SideNav open={open}>
-        {navs.map((link) => {
+        {navs.map((link, index) => {
           if (link == selected) {
             return (
               <Link
+                key={index}
                 to="sectors"
                 spy={true}
                 smooth={true}
@@ -126,12 +129,17 @@ const Navbar = () => {
                 }}
                 to={switchLinks(link)}
               >
-                <SideNavItem>{`${link}`}</SideNavItem>
+                <SideNavItem
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >{`${link}`}</SideNavItem>
               </Link>
             );
           } else {
             return (
               <Link
+                key={index}
                 to={switchLinks(link)}
                 spy={true}
                 smooth={true}
@@ -141,7 +149,11 @@ const Navbar = () => {
                   setLink(link);
                 }}
               >
-                <SideNavItem>{`${link}`}</SideNavItem>
+                <SideNavItem
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >{`${link}`}</SideNavItem>
               </Link>
             );
           }

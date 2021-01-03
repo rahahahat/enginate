@@ -1,16 +1,5 @@
 import React from "react";
 import { useTransition, animated, config } from "react-spring";
-import img0 from "../../../static/images/0.jpg";
-import img1 from "../../../static/images/1.jpg";
-import img2 from "../../../static/images/2.jpg";
-import img3 from "../../../static/images/3.jpg";
-import img4 from "../../../static/images/4.jpg";
-import img5 from "../../../static/images/5.jpg";
-import img6 from "../../../static/images/6.jpg";
-import img7 from "../../../static/images/7.jpg";
-import img8 from "../../../static/images/8.jpg";
-import img9 from "../../../static/images/9.jpg";
-import img10 from "../../../static/images/10.jpg";
 
 export default function ServiceCard({ name, img, grayscale, text }) {
   const [show, setShow] = React.useState(false);
@@ -32,7 +21,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
   });
   return (
     <div
-      class="card"
+      className="card"
       css={`
         place-self: center;
         background-color: transparent;
@@ -66,7 +55,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
         }
       `}
     >
-      <div class="card__face card__face--front">
+      <div className="card__face card__face--front">
         <div
           css={`
             width: 350px;
@@ -134,7 +123,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
           />
         </div>
       </div>
-      <div class="card__face card__face--back">
+      <div className="card__face card__face--back">
         <div
           css={`
             width: 350px;

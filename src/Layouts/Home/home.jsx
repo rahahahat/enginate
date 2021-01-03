@@ -5,19 +5,15 @@ import { Section } from "../../common-styles/section-styles";
 import Carousal from "../../components/Carsousal/carousal";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import SectorCard from "../../components/SectorCard/SectorCard";
-import logoDark from "../../../static/images/BuildingsDarkTransparent.png";
-import logoLight from "../../../static/images/logo-light.png";
 import Footer from "../../components/Footer/footer";
-import s1 from "../../../static/images/s1.jpg";
-import s2 from "../../../static/images/s2.jpg";
-import s3 from "../../../static/images/s3.jpg";
-import s4 from "../../../static/images/s4.jpg";
-import s5 from "../../../static/images/s5.png";
-import s6 from "../../../static/images/s6.png";
-import s7 from "../../../static/images/s7.jpg";
-import s8 from "../../../static/images/s8.png";
-import s9 from "../../../static/images/s9.jpg";
-import s10 from "../../../static/images/s10.jpg";
+import s3 from "../../../public/images/s3.jpg";
+import s4 from "../../../public/images/s4.jpg";
+import s5 from "../../../public/images/s5.png";
+import s6 from "../../../public/images/s6.png";
+import s7 from "../../../public/images/s7.jpg";
+import s8 from "../../../public/images/s8.png";
+import s9 from "../../../public/images/s9.jpg";
+import s10 from "../../../public/images/s10.jpg";
 import SEO from "../../components/SEO/SEO";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 import "../../index.css";
@@ -291,8 +287,8 @@ export default function Home() {
           display="block"
           id="contact-us"
           css={`
-            padding: 9rem 5rem;
-            @media (max-width: 1000px) {
+            padding: 11rem 5rem;
+            @media (max-width: 1200px) {
               padding: 2rem;
             }
           `}
@@ -303,7 +299,7 @@ export default function Home() {
               width: 80%;
               margin: 0 auto;
               box-sizing: border-box;
-              @media (max-width: 1000px) {
+              @media (max-width: 1200px) {
                 width: 100%;
                 margin: 0px;
                 flex-direction: column;
@@ -318,7 +314,7 @@ export default function Home() {
                 justify-content: center;
                 box-sizing: border-box;
                 margin-right: 4%;
-                @media (max-width: 1000px) {
+                @media (max-width: 1200px) {
                   width: fit-content;
                   margin: 0px;
                   align-self: center;
@@ -344,7 +340,7 @@ export default function Home() {
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
-                @media (max-width: 1000px) {
+                @media (max-width: 1200px) {
                   width: fit-content;
                   margin: 0px;
                   align-self: center;
