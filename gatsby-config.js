@@ -29,17 +29,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-less`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        lessOptions: {
-          javascriptEnabled: true,
-        },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-antd",
-      options: {
-        style: false,
+        // trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
       },
     },
   ],
