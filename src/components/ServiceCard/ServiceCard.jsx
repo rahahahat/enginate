@@ -142,7 +142,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               width: 350px;
               height: 100%;
               background-color: rgba(25, 91, 116, 0.8);
-              position: relative;
+              position: absolute;
               z-index: 200;
               @media (max-width: 1200px) {
                 width: 270px;
@@ -154,6 +154,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
                 color: #e6e6e6;
                 font-size: 1.2rem;
                 font-family: "Raleway";
+                position: absolute;
                 padding: 20px;
                 z-index: 300;
               `}
