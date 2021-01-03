@@ -10,8 +10,8 @@ import logoLight from "../../../static/images/logo-light.png";
 import Footer from "../../components/Footer/footer";
 import s1 from "../../../static/images/s1.jpg";
 import s2 from "../../../static/images/s2.jpg";
-import s3 from "../../../static/images/s3-bridge.jpg";
-import s4 from "../../../static/images/s4-onsite.jpg";
+import s3 from "../../../static/images/s3.jpg";
+import s4 from "../../../static/images/s4.jpg";
 import s5 from "../../../static/images/s5.png";
 import s6 from "../../../static/images/s6.png";
 import s7 from "../../../static/images/s7.jpg";
@@ -303,6 +303,7 @@ export default function Home() {
               @media (max-width: 1000px) {
                 width: 100%;
                 margin: 0px;
+                flex-direction: column;
               }
             `}
           >
@@ -314,6 +315,11 @@ export default function Home() {
                 justify-content: center;
                 box-sizing: border-box;
                 margin-right: 4%;
+                @media (max-width: 1000px) {
+                  width: fit-content;
+                  margin: 0px;
+                  align-self: center;
+                }
               `}
             >
               <img
@@ -335,6 +341,11 @@ export default function Home() {
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
+                @media (max-width: 1000px) {
+                  width: fit-content;
+                  margin: 0px;
+                  align-self: center;
+                }
               `}
             >
               <div
