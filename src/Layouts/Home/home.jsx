@@ -19,11 +19,13 @@ import s7 from "../../../static/images/s7.jpg";
 import s8 from "../../../static/images/s8.png";
 import s9 from "../../../static/images/s9.png";
 import s10 from "../../../static/images/s10.jpg";
+import SEO from "../../components/SEO/SEO";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 import "../../index.css";
 export default function Home() {
   return (
     <>
+      <SEO title="HOME" />
       <Navbar selected="Home" />
       <Layout>
         <Section padding="0px" display="flex" id="home">
