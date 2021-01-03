@@ -100,7 +100,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
                       border-top: 2px solid #10536d;
                       border-right: 2px solid #10536d;
                       border-bottom: 2px solid #10536d;
-                      /* border-radius: 0px 10px 10px 0px; */
                     `}
                   >
                     {name}
@@ -118,7 +117,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               position: absolute;
               z-index: 2;
               filter: ${grayscale ? "grayscale(100%)" : null};
-              /* border-radius: 20px; */
             `}
           />
         </div>
@@ -128,8 +126,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
           css={`
             width: 350px;
             height: 450px;
-            /* background-color: #ff3a6b; */
-            /* border-radius: 20px; */
             display: flex;
             flex-direction: column;
             @media (max-width: 1200px) {
@@ -143,7 +139,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               height: 100%;
               background-color: rgba(25, 91, 116, 0.8);
               position: relative;
-              z-index: 3;
+              z-index: 1;
               @media (max-width: 1200px) {
                 width: 270px;
               }
@@ -169,7 +165,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               object-fit: cover;
               /* box-sizing: border-box; */
               position: absolute;
-              z-index: 1;
+              z-index: 3;
             `}
           />
         </div>
