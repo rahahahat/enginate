@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   left: 0;
   display: flex;
   justify-content: center;
-  transition: 0.1s ease-out;
+  transition: 0.4s ease-out;
   box-sizing: border-box;
   z-index: 1000;
 `;
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
   background-color: ${({ prop }) => (prop ? "white" : "transparent")};
   box-shadow: ${({ prop }) =>
     prop ? "0px 0px 30px -1px rgba(0,0,0,0.6)" : null};
-  transition: 0.2s linear;
+  transition: 0.4s linear;
   @media (max-width: 900px) {
     justify-content: flex-end;
     width: 100%;

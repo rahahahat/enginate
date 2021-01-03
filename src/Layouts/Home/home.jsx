@@ -6,6 +6,7 @@ import Carousal from "../../components/Carsousal/carousal";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import SectorCard from "../../components/SectorCard/SectorCard";
 import Footer from "../../components/Footer/footer";
+import s2 from "../../../public/images/consulting.jpg";
 import s3 from "../../../public/images/s3.jpg";
 import s4 from "../../../public/images/s4.jpg";
 import s5 from "../../../public/images/s5.png";
@@ -37,7 +38,7 @@ export default function Home() {
         >
           <div
             css={`
-              font-size: 6rem;
+              font-size: 5rem;
               font-family: "Bebas Neue";
               align-self: center;
               margin-bottom: 10px;
@@ -70,7 +71,8 @@ export default function Home() {
                 width: 100%;
                 @media (max-width: 500px) {
                   width: 90%;
-                  font-size: 1.1;
+                  font-size: 1rem;
+                  text-align: start;
                 }
               `}
             >
@@ -187,7 +189,9 @@ export default function Home() {
             />
             <ServiceCard
               name="Consulting"
+              img={s2}
               text="We offer expert and professional advice where our services are required. Our expert knowledge and experience makes Enginate a company that clients can trust and value our advice. We support our clients with Expert Witness reports, Structural inspections, Partywall surveys & Litigation Assistance. "
+              grayscale
             />
             <ServiceCard
               name="On Site Assistance"
@@ -372,7 +376,8 @@ export default function Home() {
                   font-size: 1.6rem;
                   margin-bottom: 10px;
                   @media (max-width: 400px) {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
+                    text-align: start;
                   }
                 `}
               >
