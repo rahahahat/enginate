@@ -202,11 +202,11 @@ export default function Home() {
               img={s10}
               text="We offer comprehensive BIM and Computer Aided Drafting (CAD) solutions ranging from 2D drawings to 3D and beyond to relevant engineering standards such as LOD 200. Our 2D modelling is carried out in Autodesk CAD whilst our 3D modelling in Revit along with fully integrated BIM level clash detections. "
             />
-            <ServiceCard
+            {/* <ServiceCard
               name="Digital Engineering"
               img={s9}
               text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
-            />
+            /> */}
             <TestCard />
           </div>
         </Section>

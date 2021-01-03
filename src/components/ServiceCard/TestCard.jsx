@@ -1,59 +1,12 @@
 import React from "react";
-
+import { FlipContainer, Flipper, Front, Back } from "./testCard-styles";
 export default function TestCard() {
   return (
-    <div
-      class="flip-container"
-      css={`
-        perspective: 1000px;
-        z-index: 300;
-      `}
-    >
-      <div
-        class="flipper"
-        css={`
-          width: 320px;
-          height: 480px;
-          transition: 0.6s;
-          transform-style: preserve-3d;
-          position: relative;
-          :hover {
-            transform: rotateY(180deg);
-          }
-        `}
-      >
-        <div
-          class="front"
-          css={`
-            width: 320px;
-            height: 480px;
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 100;
-            background-color: red;
-            transform: rotateY(0deg);
-          `}
-        >
-          front
-        </div>
-        <div
-          class="back"
-          css={`
-            width: 320px;
-            height: 480px;
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #00ccff;
-            transform: rotateY(180deg);
-          `}
-        >
-          back
-        </div>
-      </div>
-    </div>
+    <FlipContainer>
+      <Flipper>
+        <Front>Front</Front>
+        <Back>Back</Back>
+      </Flipper>
+    </FlipContainer>
   );
 }
