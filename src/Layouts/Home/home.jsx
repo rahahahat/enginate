@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../../common-styles/layout-styles";
 import Navbar from "../../components/navbar/Navbar";
 import { Section } from "../../common-styles/section-styles";
-import { Input } from "antd";
 import Carousal from "../../components/Carsousal/carousal";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import SectorCard from "../../components/SectorCard/SectorCard";
@@ -294,13 +293,17 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Section display="block" padding="10rem" id="contact-us">
+        <Section display="block" padding="10rem 5rem" id="contact-us">
           <div
             css={`
               display: flex;
               width: 80%;
               margin: 0 auto;
               box-sizing: border-box;
+              @media (max-width: 1000px) {
+                width: 100%;
+                margin: 0px;
+              }
             `}
           >
             <div
@@ -314,7 +317,7 @@ export default function Home() {
               `}
             >
               <img
-                src="https://img.icons8.com/color/270/000000/add-contact-to-company.png"
+                src="https://img.icons8.com/color/250/000000/add-contact-to-company.png"
                 css={`
                   align-self: center;
                   opacity: 0.8;
