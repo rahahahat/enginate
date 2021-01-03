@@ -194,6 +194,7 @@ export default function Home() {
               name="On Site Assistance"
               img={s4}
               text="Our team provides on-site assistance for all projects and with our extensive experience within the construction sector. Our teams offers assistance and advice during feasibility, tender and construction period. "
+              grayscale
             />
             <ServiceCard
               name="BIM & CAD Modelling"
