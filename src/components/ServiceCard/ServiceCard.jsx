@@ -23,7 +23,7 @@ export default function ServiceCard({ name, img, grayscale, text }) {
     <div
       className="card"
       css={`
-        place-self: center;
+        /* place-self: center; */
         background-color: transparent;
         position: relative;
         color: white;
@@ -32,12 +32,14 @@ export default function ServiceCard({ name, img, grayscale, text }) {
         cursor: pointer;
         transition: 0.5s ease-in-out;
         transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
         @media (max-width: 1200px) {
           width: 270px;
         }
 
         &:hover {
+          -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
         }
 
@@ -47,9 +49,12 @@ export default function ServiceCard({ name, img, grayscale, text }) {
           left: 0;
           width: 100%;
           height: 100%;
+          -webkit-perspective: 0;
+          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           transition: 0.5s ease-in-out;
           &--back {
+            -webkit-transform: rotateY(0.5turn);
             transform: rotateY(0.5turn);
           }
         }
@@ -61,7 +66,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
             width: 350px;
             height: 450px;
             background-color: white;
-            /* border-radius: 20px; */
             display: flex;
             flex-direction: column;
             @media (max-width: 1200px) {
@@ -100,7 +104,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
                       border-top: 2px solid #10536d;
                       border-right: 2px solid #10536d;
                       border-bottom: 2px solid #10536d;
-                      /* border-radius: 0px 10px 10px 0px; */
                     `}
                   >
                     {name}
@@ -118,7 +121,6 @@ export default function ServiceCard({ name, img, grayscale, text }) {
               position: absolute;
               z-index: 2;
               filter: ${grayscale ? "grayscale(100%)" : null};
-              /* border-radius: 20px; */
             `}
           />
         </div>
@@ -174,48 +176,3 @@ export default function ServiceCard({ name, img, grayscale, text }) {
     </div>
   );
 }
-
-// Thanks to https://3dtransforms.desandro.com/card-flip
-
-//   .scene {
-//     width: 1000px;
-//     display: flex;
-//     justify-content: space-between;
-//     perspective: 800px;
-
-//     .card {
-//   position: relative;
-//   width: 240px;
-//   height: 300px;
-//   color: white;
-//   cursor: pointer;
-//   transition: 0.5s ease-in-out;
-//   transform-style: preserve-3d;
-
-//   &:hover {
-//     transform: rotateY(0.5turn);
-//   }
-
-//   .card__face {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     backface-visibility: hidden;
-//     transition: 0.5s ease-in-out;
-//     -webkit-box-reflect: below 0
-//       linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
-
-//     img {
-//       width: 240px;
-//       height: 300px;
-//       object-fit: cover;
-//     }
-
-//     &--back {
-//       transform: rotateY(0.5turn);
-//     }
-//   }
-// }
-//   }
