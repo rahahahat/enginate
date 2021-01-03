@@ -6,6 +6,7 @@ import Carousal from "../../components/Carsousal/carousal";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import SectorCard from "../../components/SectorCard/SectorCard";
 import Footer from "../../components/Footer/footer";
+import TestCard from "../../components/ServiceCard/TestCard";
 import s2 from "../../../public/images/consulting.jpg";
 import s3 from "../../../public/images/s3.jpg";
 import s4 from "../../../public/images/s4.jpg";
@@ -206,6 +207,7 @@ export default function Home() {
               img={s9}
               text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
             />
+            <TestCard />
           </div>
         </Section>
         <Section bg="#eeeeee" padding="4vw" display="block" id="sectors">
