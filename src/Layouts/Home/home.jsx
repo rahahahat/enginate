@@ -164,7 +164,6 @@ export default function Home() {
               name="Structural Engineering"
               img={s5}
               text="We carry a wealth of knowledge in structural engineering design. Our teams work closely with clients to provide a robust solution, on time and on budget. Our Engineers are fully proficient in carrying out designs to Indian Standards, British Standards and Eurocodes."
-              grayscale
             />
             <ServiceCard
               name="Civil Engineering"
@@ -175,7 +174,6 @@ export default function Home() {
               name="Project and Design Management"
               img={s8}
               text="Our dedicated team of project and design managers provide solutions to the most complex contracts. Our focus is to ensure that the project is delivered to our client’s aspirations in tandem with the planning, organisation, reporting and programming."
-              grayscale
             />
             <ServiceCard
               name="Reinforcement Detailing"
@@ -191,13 +189,11 @@ export default function Home() {
               name="Consulting"
               img={s2}
               text="We offer expert and professional advice where our services are required. Our expert knowledge and experience makes Enginate a company that clients can trust and value our advice. We support our clients with Expert Witness reports, Structural inspections, Partywall surveys & Litigation Assistance. "
-              grayscale
             />
             <ServiceCard
               name="On Site Assistance"
               img={s4}
               text="Our team provides on-site assistance for all projects and with our extensive experience within the construction sector. Our teams offers assistance and advice during feasibility, tender and construction period. "
-              grayscale
             />
             <ServiceCard
               name="BIM & CAD Modelling"
