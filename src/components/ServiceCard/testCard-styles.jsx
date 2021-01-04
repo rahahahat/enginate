@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const FlipContainer = styled.div`
-  perspective: 1000px;
-  z-index: 300;
+  perspective: 500px;
 `;
 export const Flipper = styled.div`
-  width: 320px;
-  height: 480px;
+  width: 350px;
+  height: 450px;
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
@@ -15,8 +14,8 @@ export const Flipper = styled.div`
   }
 `;
 export const Front = styled.div`
-  width: 320px;
-  height: 480px;
+  width: 350px;
+  height: 450px;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -26,8 +25,8 @@ export const Front = styled.div`
   transform: rotateY(0deg);
 `;
 export const Back = styled.div`
-  width: 320px;
-  height: 480px;
+  width: 350px;
+  height: 450px;
   backface-visibility: hidden;
   position: absolute;
   top: 0;

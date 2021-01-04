@@ -207,7 +207,11 @@ export default function Home() {
               img={s9}
               text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
             /> */}
-            <TestCard />
+            <TestCard
+              name="Digital Engineering ooof"
+              img={s9}
+              text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
+            />
           </div>
         </Section>
         <Section bg="#eeeeee" padding="4vw" display="block" id="sectors">
