@@ -1,8 +1,8 @@
 import React from "react";
 import { useTransition, animated, config } from "react-spring";
-import { FlipContainer, Flipper, Front, Back } from "./testCard-styles";
+import { FlipContainer, Flipper, Front, Back } from "./serviceCard-styles";
 
-export default function TestCard({ name, img, text, grayscale }) {
+export default function ServiceCard({ name, img, text, grayscale }) {
   const [show, setShow] = React.useState(false);
   const transition = useTransition(show, null, {
     from: { transform: "translateX(-150px)", opacity: 0 },
