@@ -3,10 +3,10 @@ import Layout from "../../common-styles/layout-styles";
 import Navbar from "../../components/navbar/Navbar";
 import { Section } from "../../common-styles/section-styles";
 import Carousal from "../../components/Carsousal/carousal";
-import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import ServiceCard from "../../components/ServiceCard/ServiceCardv2";
 import SectorCard from "../../components/SectorCard/SectorCard";
 import Footer from "../../components/Footer/footer";
-import TestCard from "../../components/ServiceCard/TestCard";
+// import TestCard from "../../components/ServiceCard/ServiceCardv2";
 import s2 from "../../../public/images/consulting.jpg";
 import s3 from "../../../public/images/s3.jpg";
 import s4 from "../../../public/images/s4.jpg";
@@ -175,6 +175,7 @@ export default function Home() {
               name="Project and Design Management"
               img={s8}
               text="Our dedicated team of project and design managers provide solutions to the most complex contracts. Our focus is to ensure that the project is delivered to our client’s aspirations in tandem with the planning, organisation, reporting and programming."
+              grayscale
             />
             <ServiceCard
               name="Reinforcement Detailing"
@@ -202,13 +203,8 @@ export default function Home() {
               img={s10}
               text="We offer comprehensive BIM and Computer Aided Drafting (CAD) solutions ranging from 2D drawings to 3D and beyond to relevant engineering standards such as LOD 200. Our 2D modelling is carried out in Autodesk CAD whilst our 3D modelling in Revit along with fully integrated BIM level clash detections. "
             />
-            {/* <ServiceCard
+            <ServiceCard
               name="Digital Engineering"
-              img={s9}
-              text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
-            /> */}
-            <TestCard
-              name="Digital Engineering ooof"
               img={s9}
               text="With increased complexities in the design techniques, we employ various digital engineering tools to meet our clients expectations and unlock greater value of their assets. Our collaborative working, data sharing and management holds key to the success of our business. We have created various software tools to automate repetitive designs in order to save both timescales and human error. "
             />

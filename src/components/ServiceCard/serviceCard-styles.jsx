@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FlipContainer = styled.div`
-  perspective: 500px;
+  perspective: 1000px;
 `;
 export const Flipper = styled.div`
   width: 350px;
@@ -11,6 +11,9 @@ export const Flipper = styled.div`
   position: relative;
   :hover {
     transform: rotateY(180deg);
+  }
+  @media (max-width: 1200px) {
+    width: 270px;
   }
 `;
 export const Front = styled.div`
@@ -23,6 +26,9 @@ export const Front = styled.div`
   z-index: 100;
   background-color: red;
   transform: rotateY(0deg);
+  @media (max-width: 1200px) {
+    width: 270px;
+  }
 `;
 export const Back = styled.div`
   width: 350px;
@@ -33,4 +39,7 @@ export const Back = styled.div`
   left: 0;
   background-color: #00ccff;
   transform: rotateY(180deg);
+  @media (max-width: 1200px) {
+    width: 270px;
+  }
 `;
