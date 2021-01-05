@@ -61,15 +61,24 @@ const Navbar = () => {
             <div />
             <div />
           </Hamburger>
-          <img
-            src={logo}
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
             css={`
-              display: ${state ? "block" : "none"};
-              width: 60px;
-              height: 50px;
               align-self: center;
             `}
-          />
+          >
+            <img
+              src={logo}
+              css={`
+                display: ${state ? "block" : "none"};
+                width: 60px;
+                height: 50px;
+                align-self: center;
+              `}
+            />
+          </Link>
           <LinkWrap>
             {navs.map((link, index) => {
               if (link == selected) {
