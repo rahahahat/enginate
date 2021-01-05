@@ -7,7 +7,7 @@ import ServiceCard from "../../components/ServiceCard/ServiceCardv2";
 import SectorCard from "../../components/SectorCard/SectorCard";
 import Footer from "../../components/Footer/footer";
 // import TestCard from "../../components/ServiceCard/ServiceCardv2";
-import s2 from "../../../public/images/consulting.jpg";
+import s2 from "../../../public/images/c.jpg";
 import s3 from "../../../public/images/s3.jpg";
 import s4 from "../../../public/images/s4.jpg";
 import s5 from "../../../public/images/s5.png";
@@ -73,11 +73,10 @@ export default function Home() {
                 @media (max-width: 500px) {
                   width: 90%;
                   font-size: 1rem;
-                  text-align: start;
                 }
               `}
             >
-              We are an innovative, forward thinking engineering consultancy
+              We are an innovative and forward thinking Organisation
               specializing in Civil & Structural Engineering services across all
               sectors. <br /> <br /> We work alongside architects, developers,
               end users, designers and contractors on new build and
@@ -380,8 +379,8 @@ export default function Home() {
                   }
                 `}
               >
-                Get in touch with our people. Drop us a line and we will get
-                back to you as soon as possible.
+                If you would like to get in touch with us, please contact us via
+                the email below and we will get back to you as soon as possible.
               </div>
               <div
                 css={`
