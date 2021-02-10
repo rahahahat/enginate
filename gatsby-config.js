@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Enginate`,
+    title: `Enginate Consultants`,
     description: `Enginate Consultants`,
-    author: `Rahat Muneeb`,
+    author: `Enginate Consultants`,
     keywords: [
       "enginate consultants",
       "enginate",
@@ -17,6 +17,7 @@ module.exports = {
       "chartered engineers",
       "civil",
       "structural",
+      "enginateconsultants.com",
     ],
   },
   plugins: [
