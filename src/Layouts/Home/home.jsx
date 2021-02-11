@@ -6,7 +6,6 @@ import Carousal from "../../components/Carsousal/carousal";
 import ServiceCard from "../../components/ServiceCard/ServiceCardv2";
 import SectorCard from "../../components/SectorCard/SectorCard";
 import Footer from "../../components/Footer/footer";
-// import TestCard from "../../components/ServiceCard/ServiceCardv2";
 import s2 from "../../../public/images/c.jpg";
 import s3 from "../../../public/images/s3.jpg";
 import s4 from "../../../public/images/s4.jpg";
@@ -17,13 +16,12 @@ import s8 from "../../../public/images/s8.png";
 import s9 from "../../../public/images/s9.jpg";
 import s10 from "../../../public/images/s10.jpg";
 import SEO from "../../components/SEO/SEO";
-// import Flippy, { FrontSide, BackSide } from "react-flippy";
 import "../../index.css";
 
 export default function Home() {
   return (
     <>
-      <SEO title="HOME" />
+      <SEO title="Home" />
       <Navbar selected="Home" />
       <Layout>
         <Section padding="0px" display="flex" id="home">
