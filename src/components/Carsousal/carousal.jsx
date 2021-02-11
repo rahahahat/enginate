@@ -21,7 +21,7 @@ const Carousal = ({}) => {
       setImg((img) => {
         return (img + 1) % 10;
       });
-    }, 3000);
+    }, 5000);
     return () => {
       clearTimeout(time);
     };

@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.enginateconsultants.com`,
     title: `Enginate Consultants`,
-    description: `Enginate Consultants`,
+    description: `We are an innovative and forward thinking Organisation specializing in Civil & Structural Engineering services across all sectors. `,
     author: `Enginate Consultants`,
     keywords: [
       "enginate consultants",
@@ -22,6 +23,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.enginateconsultants.com",
+        sitemap: "https://www.enginateconsultants.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
@@ -46,6 +56,9 @@ module.exports = {
       options: {
         // trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
       },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
     },
   ],
 };

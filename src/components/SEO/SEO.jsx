@@ -1,88 +1,87 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata.title;
-
+import { StaticQuery, graphql } from "gatsby";
+const defKeywords = [
+  "enginate consultants",
+  "enginate",
+  "consultants",
+  "structural engineers",
+  "civil engineers",
+  "BIM",
+  "consulting",
+  "bridge engineers",
+  "innovation",
+  "CAD",
+  "chartered engineers",
+  "civil",
+  "structural",
+  "enginateconsultants.com",
+];
+const SEO = ({ title, siteUrl, description, author, keywords }) => {
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
+    <StaticQuery
+      query={detailsQuery}
+      render={(data) => {
+        const metaDescription =
+          description || data.site.siteMetadata.description;
+        const metaTitle = title || data.site.siteMetadata.title;
+        const metaAuthor = author || data.site.siteMetadata.author;
+        const metaUrl = siteUrl || data.site.siteMetadata.siteUrl;
+        const metaKeywords = keywords || defKeywords;
+        return (
+          <Helmet
+            title={title}
+            meta={[
+              {
+                name: `description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:title`,
+                content: metaTitle,
+              },
+              {
+                property: `og:author`,
+                content: metaAuthor,
+              },
+              {
+                property: `og:description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:type`,
+                content: `website`,
+              },
+              {
+                property: `og:url`,
+                content: metaUrl,
+              },
+            ].concat(
+              metaKeywords && metaKeywords.length > 0
+                ? {
+                    name: `keywords`,
+                    content: metaKeywords.join(`, `),
+                  }
+                : []
+            )}
+          />
+        );
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content:
-            title === "Home"
-              ? `Spoiler Free Persona`
-              : `${title} | ${defaultTitle}`,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: `../static/icon-512.png`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:image`,
-          content: `../static/icon-512.png`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content:
-            title === "Home"
-              ? `Spoiler Free Persona`
-              : `${title} | ${defaultTitle}`,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
     />
   );
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 };
+
+const detailsQuery = graphql`
+  query DefaultSEOQuery {
+    site {
+      siteMetadata {
+        siteUrl
+        title
+        description
+        author
+      }
+    }
+  }
+`;
 
 export default SEO;
