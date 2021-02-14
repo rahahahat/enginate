@@ -24,14 +24,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        host: "https://www.enginateconsultants.com",
-        sitemap: "https://www.enginateconsultants.com/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
@@ -50,15 +43,6 @@ module.exports = {
         fonts: [`Raleway`, `Bebas Neue`, "Alatsi", "Roboto Condensed"],
         display: "swap",
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
     },
   ],
 };

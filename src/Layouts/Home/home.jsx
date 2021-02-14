@@ -19,9 +19,31 @@ import SEO from "../../components/SEO/SEO";
 import "../../index.css";
 
 export default function Home() {
+  const seo = {
+    title = "Enginate Consultants",
+    description = "We are an innovative and forward thinking Organisation specializing in Civil & Structural Engineering services across all sectors.",
+    siteUrl = "https://www.enginateconsultants.com",
+    author = "Enginate Consultants",
+    keywords = [
+      "enginate consultants",
+      "enginate",
+      "consultants",
+      "structural engineers",
+      "civil engineers",
+      "BIM",
+      "consulting",
+      "bridge engineers",
+      "innovation",
+      "CAD",
+      "chartered engineers",
+      "civil",
+      "structural",
+      "enginateconsultants.com",
+    ],
+  }
   return (
     <>
-      <SEO title="Home" />
+      <SEO title={seo.title} author={seo.author} description={seo.description} siteUrl={seo.siteUrl} keywords={seo.keywords}/>
       <Navbar selected="Home" />
       <Layout>
         <Section padding="0px" display="flex" id="home">
