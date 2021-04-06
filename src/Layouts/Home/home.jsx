@@ -14,7 +14,7 @@ import s6 from "../../../public/images/s6.png";
 import s7 from "../../../public/images/s7.jpg";
 import s8 from "../../../public/images/s8.png";
 import s9 from "../../../public/images/s9.jpg";
-import s10 from "../../../public/images/s10.jpg";
+import s10 from "../../../public/images/s_new.jpeg";
 import SEO from "../../components/SEO/SEO";
 import "../../index.css";
 
