@@ -307,7 +307,7 @@ export default function Home() {
               src="https://img.icons8.com/color/120/000000/airport-building.png"
             />
             <SectorCard
-              sector="Highway"
+              sector="Highways"
               src="https://img.icons8.com/color/120/000000/highway.png"
             />
           </div>
